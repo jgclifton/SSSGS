@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>title</title>
+		<link rel="stylesheet" href="/css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato|Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="js/min/script-min.js"></script>
+		<script src="js/min/codemirror-min.js"></script>
+
+	</head>
+	<body>
+		<div class="outer-container sticky-header">
+			<div class="container">
+				<header class="row">
+					<div class="column-6-16">
+						<h1>SSSGS<span class="mob-hide">: Super Simple Sass Grid System</span></h1>
+
+					</div>
+					<div class="column-10-16">
+						<nav>
+							<ul>
+								<li><a href="">Home</a></li>
+								<li><a href="">Features</a></li>
+								<li>Usage</li>
+								<li>Download</li>
+								<li>Credits</li>
+							</ul>
+						</nav>
+					</div>
+				</header>
+			</div>
+		</div>
+		
+		<div class="outer-container grad-panel">
+			<div class="container">
+				<div class="row hero">
+					<div class="column-16-16">
+						<h2>
+							SSSGS is (yet another) Sass grid system.
+						</h2>
+						<h2>It's designed for each user to change as they need, and contains no other styling such as typography...</h2>
+						<h2>... and yes, it's responsive :)</h2>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	
+		<div class="container">
+
+			<div class="row features">
+				<div class="column-4-16">
+				 	<i class="fa fa-check"></i>
+					<h2>Just a Grid</h2>
+					<p>Super simple. Under 150 lines of code - it's easy to read and modify and contains no other styling. All nestable by default and no need to use alpha/omega or first/last classes.</p>
+				</div>				
+				<div class="column-4-16">
+					<i class="fa fa-wrench"></i>
+					<h2>Easy to Configure</h2>
+					<p>SSGS is designed to be modified by each user - download it and make it your own. Specify the amount of columns and how big you want gutters to be.</p>
+				</div>				
+				<div class="column-4-16">
+					<i class="fa fa-code"></i>
+					<h2>Easy Syntax</h2>
+					<p>There's no fractions here, just a simple number system - .column-4-16 means "take up four columns out of the sixteen available".</p>
+				</div>				
+				<div class="column-4-16">
+					<i class="fa fa-thumbs-up"></i>
+					<h2>Permissive License</h2>
+					<p>Use it for personal or commercial projects free of charge (MIT), just don't try to sell it. That's not cool. If you have used it, let us know! We love to see SSSGS in action.</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="column-8-16">
+					<h2>Why another grid system?</h2>
+					<p>Making a grid system is like a right of passage for a web developer. Just kidding. This grid system is really self serving, it has been released just to give something back, and see if others like it.</p><p>It's really small and easy to configure, with just a few minutes of practice you can create flexible grids in no time.</p><p> <strong>It's currently still in BETA, so do let us know if you get any issues.</strong></p>
+				</div>
+				<div class="column-8-16">
+					<h2>Key Features</h2>
+					<ul>
+						<li>Uses Sass (scss variety)</li>
+						<li>It's just a grid: solid, lightweight and not intrusive.</li>
+						<li>Specify the amount of columns and gutter widths that you need.</li>
+						<li>It's desktop first out of the box, but easy to change if you want mobile first.</li>
+						<li>Contains just a few useful helper classes.</li>
+						<li>Specify how many columns and gutter widths in seconds.</li>
+						<l>Uses <code>box-sizing: border-box;</code> so ie8+ only.</l>
+					</ul>
+				</div>
+				
+			</div>
+			<hr />
+			<div class="row">
+				<div class="column-16-16">
+					<h2>Installation and Usage</h2>
+				</div>
+				<div class="column-8-16">
+					<p><span class="number">1</span> Download the .scss file and drop it in your project. It's recommended to have this is a sperate file and then import it using the sass import function.</p>
+				</div>
+				<div class="column-8-16">
+					<p><code>import "grid";</code></p>
+				</div>			
+			</div>
+			<hr>
+			<div class="row">
+				<div class="column-8-16">
+					<p><span class="number">2</span> Open up the grid.scss file and start to change some settings. By default it has a 1200px container, 16 columns and 10px gutters. Change the <code>$columns</code> and <code>$gutters</code> variables to what you need, and compile the sass.</p>
+				</div>
+				<div class="column-8-16">
+<form>
+<textarea name="sass-demo-1" id="sass-demo-1">
+/* variables - change these as you wish */
+$columns: 16;
+$gutters: 10px;
+</textarea>
+</form>
+						<script>
+							var editor = CodeMirror.fromTextArea(document.getElementById("sass-demo-1"), {lineNumbers: true, readOnly: true, mode: "css", htmlMode: true});
+						</script>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="column-8-16">
+					<p><span class="number">3</span> We have three simple concepts to use the grid: containers, rows and columns. The .container is what wraps around all of your content (and by default on a large screen is 1200px wide).</p>
+					<p>Rows contain columns and you need a row each time you've used up all of your columns.</p>
+				<p>Take a look at the adjoining code sample to see how this works. Unsurprisingly, this site is using SSSGS, so take a look at the source code for more samples.</p>
+				<p>There's also some generic sizes include for those with column numbers that don't divide in to third well. These are: <code>.column-one-quarter</code>, <code>.column-one-third</code> <code>.column-half</code>, <code>.column-three-quarters</code>, <code>.column-two-thirds</code>.</p>
+
+				</div>
+				<div class="column-8-16">
+					<p>
+
+						<form>
+<textarea name="html-demo-1" id="html-demo-1">
+<div class="container">
+	<div class="row">
+		<div class="column-10-16">
+			<!-- column spaning 10 out of the 16 available -->
+		</div>
+		<div class="column-6-16">
+			<!-- column spaning 6 out of the 16 available -->
+		</div>
+	</div>
+</div></textarea>
+						</form>
+						
+						<script>
+							var editor = CodeMirror.fromTextArea(document.getElementById("html-demo-1"), {lineNumbers: true, readOnly: true, mode: "xml", htmlMode: true});
+						</script>
+					
+					</p>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="column-8-16">
+					<p><span class="number">4</span> Offsets? no problem! Offsets follow a very similar syntax to columns. Take a look at the adjoining code sample to see them in action.</p>
+
+				</div>
+				<div class="column-8-16">
+					<p>
+
+						<form>
+<textarea name="html-demo-2" id="html-demo-2">
+<div class="container">
+	<div class="row">
+		<div class="column-10-16 offset-6-16">
+			<!-- column spaning 10 out of the 16 available, offset by 6. -->
+		</div>
+	</div>
+</div></textarea>
+						</form>
+						
+						<script>
+							var editor = CodeMirror.fromTextArea(document.getElementById("html-demo-2"), {lineNumbers: true, readOnly: true, mode: "xml", htmlMode: true});
+						</script>
+					
+					</p>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="column-8-16">
+					<p><span class="number">4</span> Now lets look at some breakpoints, because everyone loves responsive, right? SSSGS ships with just a few generic breakpoints, but adding new ones is straight forward.</p>
+					<p>There's a few simple steps that can be followed. First, set up your new media query and then set your new container width. Take a look at the adjoining code snippet to see what defaults are included.</p>
+					<p>SSSGS drops down to mobile (single column) at 720px - if this is too large or too small, simply edit the breakpoint in grid.scss.</p>
+				</div>
+				<div class="column-8-16">
+					<p>
+						<form>
+<textarea name="breakpoints" id="breakpoints">
+@media screen and (max-width: 1199px) {
+	
+	.container {
+		width: 960px;
+	}
+
+}
+
+@media screen and (max-width: 959px) {
+	
+	.container {
+		width: 90%;
+	}
+
+}
+
+@media screen and (max-width: 720px) {
+	
+	.container {
+		width: 95%;
+	}
+	
+	[class*='column-'], [class*='columns-'] {
+		width: 100%;
+	}
+	
+	[class*='offset-'] {
+		margin-left: 0;
+	}
+
+}
+</textarea>
+						</form>
+					</p>
+					
+					<script>
+							var editor = CodeMirror.fromTextArea(document.getElementById("breakpoints"), {lineNumbers: true, readOnly: true, mode: "css"});
+					</script>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="column-8-16">
+					<p><span class="number">5</span> Get some help. There's some helper classes included that may be handy in a few situations.</p>
+				</div>
+				<div class="column-8-16">
+					<ul>
+						<li>Add a <code>.stick</code> class to make columns keep their proportions - this will need to be applied to all columns in the row</li>
+						<li>Remove gutters with <code>.no-gutters</code>, <code>.no-gutter-left</code> and <code>no-gutter-right</code>.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row download">
+				<div class="column-16-16">
+					<button>
+						<a href="">Download
+							<span>from GitHub</span>
+						</a>
+					</button>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="column-16-16">
+					<h2>Credits and inspiration:</h2>
+					<ul>
+						<li>Erik Flowers: <a href="http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works">The Subtle Magic Behind Why the Bootstrap 3 Grid Works</a></li>
+						<li>Chris Coyier/CSS Tricks: <a href="http://css-tricks.com/video-screencasts/115-dont-overthink-it-grids/">Don't Overthink It Grids</a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+		
+		<div class="outer-container">
+			<div class="container">
+				<footer class="row">
+					<div class="column-16-16">
+						<p><small>Copyright SSSGS</small></p>
+
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

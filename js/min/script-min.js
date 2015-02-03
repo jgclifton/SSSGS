@@ -1,0 +1,1 @@
+function stickyHeader(){var e=$(".sticky-header").height();$(".grad-panel").css("padding-top",e)}$(document).ready(function(){stickyHeader()}),$(window).resize(function(){stickyHeader()});

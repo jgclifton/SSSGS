@@ -1,0 +1,164 @@
+@import "grid";
+@import "codemirror";
+@import "neo";
+
+$primarycolor : #446CB3;
+
+.outer-container {
+	width: 100%;
+	height: auto;
+	background-color: $primarycolor;;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #333333;
+	font-size: 20px;
+}
+
+h1 {
+	/* font-family: 'Gloria Hallelujah', cursive; */
+	font-family: 'Lato', sans-serif;
+	font-size: 22px;
+	/* text-shadow: 2px 2px #333333; */
+	font-weight: normal;
+	color: white;
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+header {
+	text-align: center;
+	color: white;
+}
+
+footer {
+	color: white;
+	margin-top: 20px
+}
+
+.sticky-header {
+	position: fixed;
+	height: auto;
+	z-index: 99;
+}
+
+code {
+	background-color: #FDE3A7;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(68, 108, 179, 1), rgba(0,0,0,0)); 
+}
+
+nav {
+	ul {
+		display: table;
+		height: 100%;
+		width: 100%;
+		line-height: 1;
+		padding: 0;
+		margin: 0;
+	}
+	
+	li {
+		list-style-type: none;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+	
+	a {
+		color: white;
+		text-decoration: none;
+		display: block;
+		padding-top: 13px;
+		padding-bottom: 13px;
+		
+		&:hover {
+			background-color: white;
+			color: $primarycolor;;
+			border-radius: 5px;
+		}
+	}
+	
+}
+
+p {
+	line-height: 1.5;
+}
+
+ul {
+	line-height: 1.5;	
+}
+
+.hero h2 {
+	font-size: 36px;
+	line-height: 1.5;
+	text-align: center;
+	font-weight: normal;
+}
+
+.grad-panel {
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 60%,rgba(0,0,0,0.1) 100%);
+}
+
+.features {
+	h2 {
+		text-align: center;
+	}
+	
+	i {
+		display: block;
+		text-align: center;
+		font-size: 100px;
+		color: $primarycolor;;
+		margin-top: 20px;
+	}
+	
+}
+
+.number {
+	font-size: 36px;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: $primarycolor;
+}
+
+.download {
+	button {
+		background-color: $primarycolor;
+		border: 1px solid $primarycolor;;
+		border-radius: 10px;
+		display: block;
+		margin: 0 auto;
+		width: 75%;
+		font-size: 26px;
+		margin-top: 10px;
+		
+		&:hover {
+			background-color: white;
+			
+			a {
+				color: $primarycolor;	
+			}
+		}
+		
+		span {
+			font-size: 14px;
+			display: block;
+		}
+		
+		a {
+			display: block;
+			color: white;
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,148 @@
+/* variables - change these as you wish */
+
+$columns: 16;
+$gutters: 10px;
+
+/* the container */
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding-left: $gutters;
+	padding-right: $gutters;
+}
+
+/* make everything border-box */
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/* really simple mixin to spit out some repeated stuff */
+
+@mixin row-info {
+	padding-left: $gutters;
+	padding-right: $gutters;
+	float: left;	
+}
+
+/* self clearing rows */
+.row {
+	zoom: 1;
+	margin-left: -$gutters;
+	margin-right: -$gutters;
+	&:before, &:after {
+		content: "";
+    	display: table;
+	}
+	&:after {
+		clear: both;	
+	}
+}
+
+/* Loop through the number of columns and create classes */
+
+@for $i from 1 through $columns {
+    .column-#{$i}-#{$columns}, .columns-#{$i}-#{$columns} {
+		width: $i * (100% / $columns);
+		@include row-info;
+    }
+}
+
+/* loop through the number of columns minus one and create "stick" classes */
+
+@for $i from 1 through ($columns - 1) {
+    .column-#{$i}-#{$columns}.stick, .columns-#{$i}-#{$columns}.stick {
+		width: $i * (100% / $columns);
+    }
+}
+
+/* some extra column sizes just in case */
+
+.column-one-quarter, column-quarter.stick {
+	width: 25%;
+	@include row-info;
+}
+
+.column-half, column-half.stick {
+	width: 50%;
+	@include row-info;
+}
+
+.column-three-quarters, column-three-quarters.stick {
+	width: 75%;
+	@include row-info;
+}
+
+.column-one-third, column-one-third.stick {
+	width: 33.333%;
+	@include row-info;
+}
+
+.column-two-thirds, column-two-thirds.stick {
+	width: 66.666%;
+	@include row-info;
+}
+
+
+/* offsets */
+
+@for $i from 1 through $columns {
+    .offset-#{$i}-#{$columns} {
+		margin-left: $i * (100% / $columns);
+    }
+}
+
+/* helper classes */
+
+.no-gutters {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.no-gutter-left {
+	paddig-left: 0;
+}
+
+.no-gutter-right {
+	padding-right: 0;	
+}
+
+.outer-container {
+	width: 100%;
+	height: auto;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1199px) {
+	
+	.container {
+		width: 960px;
+	}
+
+}
+
+@media screen and (max-width: 959px) {
+	
+	.container {
+		width: 90%;
+	}
+
+}
+
+@media screen and (max-width: 720px) {
+	
+	.container {
+		width: 95%;
+	}
+	
+	[class*='column-'], [class*='columns-'] {
+		width: 100%;
+	}
+	
+	[class*='offset-'] {
+		margin-left: 0;
+	}
+
+}
