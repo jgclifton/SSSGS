@@ -8,8 +8,7 @@
 
 /* make everything border-box */
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 /* really simple mixin to spit out some repeated stuff */
 /* self clearing rows */
@@ -246,6 +245,7 @@
 .offset-16-16 {
   margin-left: 100%; }
 
+/* TODO offsets of thirds etc */
 /* helper classes */
 .no-gutters {
   padding-left: 0;
@@ -312,7 +312,6 @@
   min-width: 20px;
   text-align: right;
   color: #999;
-  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 .CodeMirror-guttermarker {
@@ -483,13 +482,11 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
   outline: none;
   /* Prevent dragging from highlighting the element */
   position: relative;
-  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 .CodeMirror-sizer {
   position: relative;
   border-right: 30px solid transparent;
-  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 /* The fake, visible scrollbars. Used to force redraw during scrolling
@@ -530,7 +527,6 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 .CodeMirror-gutter {
   white-space: normal;
   height: 100%;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   padding-bottom: 30px;
   margin-bottom: -32px;
@@ -628,7 +624,7 @@ div.CodeMirror-cursors {
 
 /* Used to force a border model for a node */
 .cm-force-border {
-  padding-right: 0.1px; }
+  padding-right: .1px; }
 
 @media print {
   /* Hide the cursor when printing */
@@ -731,7 +727,7 @@ code {
 hr {
   border: 0;
   height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #446cb3, rgba(0, 0, 0, 0)); }
+  background-image: -webkit-linear-gradient(left, transparent, #446cb3, transparent); }
 
 nav ul {
   display: table;
@@ -769,8 +765,8 @@ ul {
   font-weight: normal; }
 
 .grad-panel {
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.1) 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.1) 100%); }
+  background: -webkit-linear-gradient(top, transparent 60%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.1) 100%); }
 
 .features h2 {
   text-align: center; }
